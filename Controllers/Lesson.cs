@@ -14,7 +14,7 @@ namespace LMS_Api.Controllers
         {
             Service = new LessonManager();
         }
-        [HttpPost("{Lesson_Name},{Class_ID}")]
+       // [HttpPost("{Lesson_Name},{Class_ID}")]
         public void AddLessonClass(string Lesson_Name, int Class_ID)
         {
             Service.AddLessonClass(Lesson_Name, Class_ID);
@@ -24,7 +24,7 @@ namespace LMS_Api.Controllers
         {
             Service.AddLessonStudent(tBL_Lessons);
         }
-        [HttpPost("{Lesson_Name},{Class_ID}")]
+       // [HttpPost("{Lesson_Name},{Class_ID}")]
         public void DeleteLesson(string Lesson_Name, int Class_ID)
         {
             Service.DeleteLesson(Lesson_Name, Class_ID);

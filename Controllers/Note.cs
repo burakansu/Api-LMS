@@ -14,7 +14,7 @@ namespace LMS_Api.Controllers
         {
             Service = new NoteManager();
         }
-        [HttpGet("{Student_ID},{Lesson_ID}")]
+       // [HttpGet("{Student_ID},{Lesson_ID}")]
         public List<TBL_Notes> GetNotes(int Student_ID, int Lesson_ID)
         {
             return Service.GetNotes(Student_ID, Lesson_ID);
