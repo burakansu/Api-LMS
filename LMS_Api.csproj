@@ -8,12 +8,16 @@
 
   <ItemGroup>
     <Compile Remove="Business\**" />
+    <Compile Remove="DataAccess\**" />
     <Compile Remove="Data\**" />
     <Content Remove="Business\**" />
+    <Content Remove="DataAccess\**" />
     <Content Remove="Data\**" />
     <EmbeddedResource Remove="Business\**" />
+    <EmbeddedResource Remove="DataAccess\**" />
     <EmbeddedResource Remove="Data\**" />
     <None Remove="Business\**" />
+    <None Remove="DataAccess\**" />
     <None Remove="Data\**" />
   </ItemGroup>
 

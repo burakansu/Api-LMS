@@ -1,7 +1,6 @@
 ﻿using Business.Concrete;
 using Business.DataAccess.Abstract;
 using Data;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LMS_Api.Controllers
@@ -10,38 +9,41 @@ namespace LMS_Api.Controllers
     [ApiController]
     public class Class : ControllerBase
     {
-        private IClassService _classService;
+        private IClassService Service;
         public Class()
         {
-            _classService = new ClassManager();
+            Service = new ClassManager();
         }
+
         [HttpGet]
         public List<TBL_Classes> All()
         {
-            return _classService.GetAllClass();
+            return Service.GetAllClass();
         }
         [HttpGet("{id}")]
         public TBL_Classes Single(int id)
         {
-            return _classService.GetClass(id);
+            return Service.GetClass(id);
         }
         [HttpGet("{id}")]
         public TBL_Classes ClassStudent(int id)
         {
-            return _classService.GetClassStudent(id);
+            return Service.GetClassStudent(id);
         }
+        [HttpPost]
         public void SaveClass(TBL_Classes TBL_Class)
         {
-
+            Service.SaveClass(TBL_Class);
         }
         [HttpGet("{id}")]
         public void DeleteClass(int id)
         {
-            _classService.DeleteClass(id);
+            Service.DeleteClass(id);
         }
+        [HttpPost]
         public void UpdateClass(TBL_Classes TBL_Classes)
         {
-
+            Service.UpdateClass(TBL_Classes);
         }
     }
 }
