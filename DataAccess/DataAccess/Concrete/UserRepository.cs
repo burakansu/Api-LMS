@@ -10,6 +10,7 @@ namespace Business
         {
             using (Context x = new Context())
             {
+                x.Database.EnsureCreated();
                 return x.Users.ToList();
             }
         }
