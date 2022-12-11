@@ -14,20 +14,20 @@ namespace LMS_Api.Controllers
         {
             Service = new NoteManager();
         }
-       // [HttpGet("{Student_ID},{Lesson_ID}")]
-        public List<TBL_Notes> GetNotes(int Student_ID, int Lesson_ID)
+       // [HttpGet("{sid},{id}")]
+        public List<TBL_Notes> GetNotes(int sid, int id)
         {
-            return Service.GetNotes(Student_ID, Lesson_ID);
+            return Service.GetNotes(sid, id);
         }
         [HttpPost]
-        public void UpdateNote(TBL_Notes tBL_Notes)
+        public void UpdateNote(TBL_Notes obj)
         {
-            Service.UpdateNote(tBL_Notes);
+            Service.UpdateNote(obj);
         }
         [HttpPost]
-        public void AddStudentLessonNote(TBL_Notes tBL_Notes)
+        public void AddStudentLessonNote(TBL_Notes obj)
         {
-            Service.AddStudentLessonNote(tBL_Notes);
+            Service.AddStudentLessonNote(obj);
         }
     }
 }

@@ -25,25 +25,25 @@ namespace LMS_Api.Controllers
         {
             return Service.CheckUser(Mail, Password);
         }
-       // [HttpGet("{User_ID},{Password}")]
-        public int GetUserType(int User_ID, string Password)
+        // [HttpGet("{id},{Password}")]
+        public int GetUserType(int id, string Password)
         {
-            return Service.GetUserType(User_ID, Password);
+            return Service.GetUserType(id, Password);
         }
-        [HttpGet("{User_ID}")]
-        public int GetStudentID_Use_UserID(int User_ID)
+        [HttpGet("{id}")]
+        public int GetStudentID_Use_UserID(int id)
         {
-            return Service.GetStudentID_Use_UserID(User_ID);
+            return Service.GetStudentID_Use_UserID(id);
         }
-        [HttpGet("{User_ID}")]
-        public int GetTeacher_ID_Use_UserID(int User_ID)
+        [HttpGet("{id}")]
+        public int GetTeacher_ID_Use_UserID(int id)
         {
-            return Service.GetTeacher_ID_Use_UserID(User_ID);
+            return Service.GetTeacher_ID_Use_UserID(id);
         }
-        [HttpGet("{User_ID}")]
-        public int GetDirector_ID_Use_UserID(int User_ID)
+        [HttpGet("{id}")]
+        public int GetDirector_ID_Use_UserID(int id)
         {
-            return Service.GetDirector_ID_Use_UserID(User_ID);
+            return Service.GetDirector_ID_Use_UserID(id);
         }
     }
 }

@@ -25,15 +25,15 @@ namespace LMS_Api.Controllers
         {
             return Service.GetClass(id);
         }
-        //[HttpGet("{id}")]
-        //public TBL_Classes ClassStudent(int id)
-        //{
-        //    return Service.GetClassStudent(id);
-        //}
-        [HttpPost]
-        public void Post(TBL_Classes TBL_Class)
+        [HttpGet("{id}")]
+        public TBL_Classes ClassStudent(int id)
         {
-            Service.SaveClass(TBL_Class);
+            return Service.GetClassStudent(id);
+        }
+        [HttpPost]
+        public void Post(TBL_Classes obj)
+        {
+            Service.SaveClass(obj);
         }
         [HttpGet("{id}")]
         public void Delete(int id)
@@ -41,9 +41,9 @@ namespace LMS_Api.Controllers
             Service.DeleteClass(id);
         }
         [HttpPost]
-        public void Put(TBL_Classes TBL_Classes)
+        public void Put(TBL_Classes obj)
         {
-            Service.UpdateClass(TBL_Classes);
+            Service.UpdateClass(obj);
         }
     }
 }

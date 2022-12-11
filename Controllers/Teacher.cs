@@ -15,26 +15,25 @@ namespace LMS_Api.Controllers
             Service = new TeacherManager();
         }
 
-        [HttpGet("{Teacher_ID}")]
-        public TBL_Teachers GetTeacher(int Teacher_ID)
+        [HttpGet("{id}")]
+        public TBL_Teachers GetTeacher(int id)
         {
-            return Service.GetTeacher(Teacher_ID);
+            return Service.GetTeacher(id);
         }
-        [HttpGet("{Class_ID}")]
-
-        public TBL_Teachers GetTeacherForClassID(int Class_ID)
+        [HttpGet("{cid}")]
+        public TBL_Teachers GetTeacherForClassID(int cid)
         {
-            return Service.GetTeacher(Class_ID);
-        }
-        [HttpPost]
-        public void Add_Teacher(TBL_Teachers tBL_Teachers, string Mail)
-        {
-            Service.Add_Teacher(tBL_Teachers, Mail);
+            return Service.GetTeacher(cid);
         }
         [HttpPost]
-        public void Delete_Teacher(int Teacher_ID)
+        public void Add_Teacher(TBL_Teachers obj, string Mail)
         {
-            Service.Delete_Teacher(Teacher_ID);
+            Service.Add_Teacher(obj, Mail);
+        }
+        [HttpPost("{id}")]
+        public void Delete_Teacher(int id)
+        {
+            Service.Delete_Teacher(id);
         }
     }
 }

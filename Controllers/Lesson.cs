@@ -14,35 +14,35 @@ namespace LMS_Api.Controllers
         {
             Service = new LessonManager();
         }
-       // [HttpPost("{Lesson_Name},{Class_ID}")]
-        public void AddLessonClass(string Lesson_Name, int Class_ID)
+       // [HttpPost("{name},{cid}")]
+        public void AddLessonClass(string name, int cid)
         {
-            Service.AddLessonClass(Lesson_Name, Class_ID);
+            Service.AddLessonClass(name, cid);
         }
         [HttpPost]
-        public void AddLessonStudent(TBL_Lessons tBL_Lessons)
+        public void AddLessonStudent(TBL_Lessons obj)
         {
-            Service.AddLessonStudent(tBL_Lessons);
+            Service.AddLessonStudent(obj);
         }
-       // [HttpPost("{Lesson_Name},{Class_ID}")]
-        public void DeleteLesson(string Lesson_Name, int Class_ID)
+       // [HttpPost("{Lesson_Name},{cid}")]
+        public void DeleteLesson(string Lesson_Name, int cid)
         {
-            Service.DeleteLesson(Lesson_Name, Class_ID);
+            Service.DeleteLesson(Lesson_Name, cid);
         }
-        [HttpGet("{Class_ID}")]
-        public List<TBL_Lessons> GetClassLessons(int Class_ID)
+        [HttpGet("{cid}")]
+        public List<TBL_Lessons> GetClassLessons(int cid)
         {
-           return Service.GetClassLessons(Class_ID);
+           return Service.GetClassLessons(cid);
         }
-        [HttpGet("{Student_ID}")]
-        public List<TBL_Lessons> GetLessonsStudent(int Student_ID)
+        [HttpGet("{sid}")]
+        public List<TBL_Lessons> GetLessonsStudent(int sid)
         {
-           return Service.GetLessonsStudent(Student_ID);
+           return Service.GetLessonsStudent(sid);
         }
-        [HttpGet("{Student_ID}")]
-        public List<TBL_Lessons> GetStudentLessons(int Student_ID)
+        [HttpGet("{sid}")]
+        public List<TBL_Lessons> GetStudentLessons(int sid)
         {
-            return Service.GetStudentLessons(Student_ID);
+            return Service.GetStudentLessons(sid);
         }
     }
 }
