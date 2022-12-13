@@ -15,7 +15,7 @@ namespace LMS_Api.Controllers
             Service = new ClassManager();
         }
 
-        [HttpGet]
+        [HttpGet("GetAll")]
         public List<TBL_Classes> Get()
         {
             return Service.GetAllClass();

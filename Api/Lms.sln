@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LMS_Api", "LMS_Api.csproj", "{E675D1B6-3125-466E-98DF-F4CAB9AD7AF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS_Api", "LMS_Api.csproj", "{E675D1B6-3125-466E-98DF-F4CAB9AD7AF3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{A7EB5C88-AF05-417B-949B-E45EB3512344}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{A7EB5C88-AF05-417B-949B-E45EB3512344}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{95965D31-14B1-4116-B411-88F0B34225BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{95965D31-14B1-4116-B411-88F0B34225BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{ED9C9E54-A4B1-4862-91A1-E46B85755EB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{ED9C9E54-A4B1-4862-91A1-E46B85755EB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
