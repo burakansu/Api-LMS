@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LMS_Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class Note : ControllerBase
     {
@@ -14,12 +14,12 @@ namespace LMS_Api.Controllers
         {
             Service = new NoteManager();
         }
-       // [HttpGet("{sid},{id}")]
+        [HttpGet("GetNotes/{sid}-{id}")]
         public List<TBL_Notes> GetNotes(int sid, int id)
         {
             return Service.GetNotes(sid, id);
         }
-        [HttpPost]
+        [HttpPut]
         public void UpdateNote(TBL_Notes obj)
         {
             Service.UpdateNote(obj);

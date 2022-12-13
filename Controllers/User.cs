@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LMS_Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class User : ControllerBase
     {
@@ -30,17 +30,17 @@ namespace LMS_Api.Controllers
         {
             return Service.GetUserType(id, Password);
         }
-        [HttpGet("{id}")]
+        [HttpGet("GetStudentID_Use_UserID/{id}")]
         public int GetStudentID_Use_UserID(int id)
         {
             return Service.GetStudentID_Use_UserID(id);
         }
-        [HttpGet("{id}")]
+        [HttpGet("GetTeacher_ID_Use_UserID/{id}")]
         public int GetTeacher_ID_Use_UserID(int id)
         {
             return Service.GetTeacher_ID_Use_UserID(id);
         }
-        [HttpGet("{id}")]
+        [HttpGet("GetDirector_ID_Use_UserID/{id}")]
         public int GetDirector_ID_Use_UserID(int id)
         {
             return Service.GetDirector_ID_Use_UserID(id);

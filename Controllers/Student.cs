@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LMS_Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class Student : ControllerBase
     {
@@ -19,17 +19,17 @@ namespace LMS_Api.Controllers
         {
             Service.Add_Student(obj, Mail);
         }
-        [HttpGet("{cid}")]
+        [HttpGet("GetSelectedClassStudents/{cid}")]
         public List<TBL_Students> GetSelectedClassStudents(int cid)
         {
             return Service.GetSelectedClassStudents(cid).ToList();
         }
-        [HttpGet("{id}")]
+        [HttpGet("Get/{id}")]
         public TBL_Students GetStudent(int id)
         {
             return Service.GetStudent(id);
         }
-        [HttpGet("{id}")]
+        [HttpDelete("Delete/{id}")]
         public void DeleteStudent(int id)
         {
             Service.DeleteStudent(id);

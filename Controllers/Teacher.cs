@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LMS_Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class Teacher : ControllerBase
     {
@@ -15,12 +15,12 @@ namespace LMS_Api.Controllers
             Service = new TeacherManager();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("Get/{id}")]
         public TBL_Teachers GetTeacher(int id)
         {
             return Service.GetTeacher(id);
         }
-        [HttpGet("{cid}")]
+        [HttpGet("GetTeacherForClassID/{cid}")]
         public TBL_Teachers GetTeacherForClassID(int cid)
         {
             return Service.GetTeacher(cid);
@@ -30,7 +30,7 @@ namespace LMS_Api.Controllers
         {
             Service.Add_Teacher(obj, Mail);
         }
-        [HttpPost("{id}")]
+        [HttpDelete("Delete/{id}")]
         public void Delete_Teacher(int id)
         {
             Service.Delete_Teacher(id);

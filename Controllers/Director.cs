@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LMS_Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class Director : ControllerBase
     {
@@ -15,7 +15,7 @@ namespace LMS_Api.Controllers
             Service = new DirectorManager();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("Get/{id}")]
         public TBL_Directors GetDirector(int id)
         {
             return Service.GetDirector(id);
