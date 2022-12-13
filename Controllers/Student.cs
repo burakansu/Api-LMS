@@ -15,7 +15,7 @@ namespace LMS_Api.Controllers
             Service = new StudentManager();
         }
         [HttpPost]
-        public void Add_Student(TBL_Students obj, string Mail)
+        public void Add_Student([FromBody] TBL_Students obj, string Mail)
         {
             Service.Add_Student(obj, Mail);
         }

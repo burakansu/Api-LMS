@@ -20,7 +20,7 @@ namespace LMS_Api.Controllers
             Service.AddLessonClass(name, cid);
         }
         [HttpPost]
-        public void AddLessonStudent(TBL_Lessons obj)
+        public void AddLessonStudent([FromBody] TBL_Lessons obj)
         {
             Service.AddLessonStudent(obj);
         }

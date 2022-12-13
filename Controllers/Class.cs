@@ -31,7 +31,7 @@ namespace LMS_Api.Controllers
             return Service.GetClassStudent(id);
         }
         [HttpPost]
-        public void Post(TBL_Classes obj)
+        public void Post([FromBody] TBL_Classes obj)
         {
             Service.SaveClass(obj);
         }
@@ -41,7 +41,7 @@ namespace LMS_Api.Controllers
             Service.DeleteClass(id);
         }
         [HttpPut]
-        public void Put(TBL_Classes obj)
+        public void Put([FromBody] TBL_Classes obj)
         {
             Service.UpdateClass(obj);
         }

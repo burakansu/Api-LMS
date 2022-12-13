@@ -25,7 +25,7 @@ namespace LMS_Api.Controllers
             Service.UpdateNote(obj);
         }
         [HttpPost]
-        public void AddStudentLessonNote(TBL_Notes obj)
+        public void AddStudentLessonNote([FromBody] TBL_Notes obj)
         {
             Service.AddStudentLessonNote(obj);
         }

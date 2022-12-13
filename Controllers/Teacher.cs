@@ -26,7 +26,7 @@ namespace LMS_Api.Controllers
             return Service.GetTeacher(cid);
         }
         [HttpPost]
-        public void Add_Teacher(TBL_Teachers obj, string Mail)
+        public void Add_Teacher([FromBody] TBL_Teachers obj, string Mail)
         {
             Service.Add_Teacher(obj, Mail);
         }

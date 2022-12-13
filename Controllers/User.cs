@@ -20,12 +20,12 @@ namespace LMS_Api.Controllers
         {
             return Service.GetUsers();
         }
-       // [HttpGet("{Mail},{Password}")]
+        [HttpGet("CheckUser/{Mail}-{Password}")]
         public int CheckUser(string Mail, string Password)
         {
             return Service.CheckUser(Mail, Password);
         }
-        // [HttpGet("{id},{Password}")]
+         [HttpGet("GetUserType/{id}-{Password}")]
         public int GetUserType(int id, string Password)
         {
             return Service.GetUserType(id, Password);
