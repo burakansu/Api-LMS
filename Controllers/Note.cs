@@ -1,5 +1,5 @@
 ﻿using Business.Concrete;
-using Data;
+using Data.Model;
 using DataAccess.DataAccess.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,7 +20,7 @@ namespace LMS_Api.Controllers
             return Service.GetNotes(sid, id);
         }
         [HttpPut]
-        public void UpdateNote(TBL_Notes obj)
+        public void Update(TBL_Notes obj)
         {
             Service.UpdateNote(obj);
         }

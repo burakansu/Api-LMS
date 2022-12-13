@@ -1,5 +1,5 @@
-﻿using Data;
-using Data.Context;
+﻿using Data.Context;
+using Data.Model;
 using DataAccess.DataAccess.Abstract;
 
 namespace Business

@@ -1,5 +1,5 @@
 ﻿using Business.Concrete;
-using Data;
+using Data.Model;
 using DataAccess.DataAccess.Abstract;
 using Microsoft.AspNetCore.Mvc;
 

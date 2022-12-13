@@ -1,5 +1,5 @@
 ﻿using Business.Concrete;
-using Data;
+using Data.Model;
 using DataAccess.DataAccess.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +16,7 @@ namespace LMS_Api.Controllers
         }
 
         [HttpGet]
-        public List<TBL_Users> GetUsers()
+        public List<TBL_Users> Get()
         {
             return Service.GetUsers();
         }

@@ -1,5 +1,5 @@
 ﻿using Data.Context;
-using Data;
+using Data.Model;
 
 namespace DataAccess.DataAccess.Abstract
 {

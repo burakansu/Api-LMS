@@ -1,5 +1,5 @@
 ﻿using Business.DataAccess.Abstract;
-using Data;
+using Data.Model;
 
 namespace Business.Concrete
 {

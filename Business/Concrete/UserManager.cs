@@ -1,4 +1,4 @@
-﻿using Data;
+﻿using Data.Model;
 using DataAccess.DataAccess.Abstract;
 
 namespace Business.Concrete

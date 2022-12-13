@@ -1,5 +1,5 @@
 ﻿using Business.Concrete;
-using Data;
+using Data.Model;
 using DataAccess.DataAccess.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,8 +15,9 @@ namespace LMS_Api.Controllers
             Service = new DirectorManager();
         }
 
-        [HttpGet("Get/{id}")]
-        public TBL_Directors GetDirector(int id)
+        [HttpGet]
+        [Route("{id}")]
+        public TBL_Directors Get(int id)
         {
             return Service.GetDirector(id);
         }

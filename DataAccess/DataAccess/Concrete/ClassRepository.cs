@@ -1,6 +1,6 @@
 ﻿using Business.DataAccess.Abstract;
-using Data;
 using Data.Context;
+using Data.Model;
 
 namespace Business
 {

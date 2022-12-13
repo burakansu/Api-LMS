@@ -1,4 +1,4 @@
-﻿using Data;
+﻿using Data.Model;
 
 namespace DataAccess.DataAccess.Abstract
 {
